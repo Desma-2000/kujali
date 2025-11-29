@@ -14,11 +14,12 @@
 
     <div *ngIf="showFilter" class="filter-section">
       <!-- <kujali-invoices-filter (filterChanged)='fieldsFilter($event)'>
-			</kujali-invoices-filter> -->
+      </kujali-invoices-filter> -->
     </div>
 
     <div class="table-container">
-      <app-budget-table [budgets$]="allBudgets$"></app-budget-table>
+      <!-- Pass the signal directly instead of the observable -->
+      <app-budget-table [budgets]="allBudgetsSignal"></app-budget-table>
     </div>
   </div>
 </app-page>
